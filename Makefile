@@ -10,11 +10,11 @@ createdb:
 dropdb:
 	docker exec -it postgres dropdb --username=root nextcrm
 
-dbmigrateup:
-	go run migrateup/main.go
+migrateup:
+	go run dbmigrateup/main.go
 
-dbmigratedown:
-	go run migratedown/main.go
+migratedown:
+	go run dbmigratedown/main.go
 
 run:
 	go run main.go
